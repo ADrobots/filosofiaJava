@@ -20,6 +20,7 @@ public class Question16 {
         }
 
         File[] files=new File(args[0]).listFiles();
+
         for (File s:files) {
             System.out.println(s);
         }
@@ -35,7 +36,7 @@ public class Question16 {
 
 
 
-        for(int i=0; i<=files.length; i++) {
+        for(int i=0; i<files.length; i++) {
             int index = 0;
             Matcher m = p.matcher("");
             /*Matcher m=Pattern.compile(p.toString()).matcher("");*/

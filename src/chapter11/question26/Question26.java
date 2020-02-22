@@ -2,7 +2,7 @@ package chapter11.question26;
 
 import chapter11.question25.Question25;
 import net.mindview.util.TextFile;
-import org.omg.CORBA.INTERNAL;
+//import org.omg.CORBA.INTERNAL;
 
 import java.util.*;
 
