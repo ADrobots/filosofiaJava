@@ -19,11 +19,45 @@ public class Question16 {
             System.exit(0);
         }
 
-        File[] files=new File(args[0]).listFiles();
+        File file=new File(args[0]);
+        if (file.getName().endsWith(".java")){
+            System.out.println("with file");
 
-        for (File s:files) {
-            System.out.println(s);
+            Matcher m=Pattern.compile(args[1]).matcher("");
+            int index=0;
+            for (String s:new TextFile(args[0].toString())) {
+                m.reset(s);
+                while (m.find()){
+                    System.out.println(index++ +" "+m.group()+": "+m.start());
+                }
+            }
         }
+
+        if (!file.getName().endsWith(".java")){
+            System.out.println("directory");
+            File[] files=new File(args[0]).listFiles();
+
+            for (int i=0; i<files.length; i++) {
+
+                Matcher m = Pattern.compile(args[1].toString()).matcher("");
+                int index = 0;
+                for (String s : new TextFile(files[i].toString())) {
+                    m.reset(s);
+                    while (m.find()) {
+                        System.out.println(index++ + " " + m.group() + ": " + m.start());
+                    }
+                }
+            }
+        }
+
+//        File[] files=new File(args[0]).listFiles();
+//        files[0].getName().endsWith(".java");
+//
+//
+//
+//        for (File s:files) {
+//            System.out.println(s);
+//        }
 
         int flag=0;
         if(args[2].equals("Pattern.CASE_INSENSITIVE")) flag=Pattern.CASE_INSENSITIVE;
@@ -36,18 +70,18 @@ public class Question16 {
 
 
 
-        for(int i=0; i<files.length; i++) {
-            int index = 0;
-            Matcher m = p.matcher("");
-            /*Matcher m=Pattern.compile(p.toString()).matcher("");*/
-            for (String line : new TextFile(files[i].toString())) {
-                m.reset(line);
-                while (m.find()) {
-                    System.out.println(index++ + ": " + m.group() + ": " + m.start());
-                }
-            }
-            System.out.println("============");
-        }
+//        for(int i=0; i<files.length; i++) {
+//            int index = 0;
+//            Matcher m = p.matcher("");
+//            /*Matcher m=Pattern.compile(p.toString()).matcher("");*/
+//            for (String line : new TextFile(files[i].toString())) {
+//                m.reset(line);
+//                while (m.find()) {
+//                    System.out.println(index++ + ": " + m.group() + ": " + m.start());
+//                }
+//            }
+//            System.out.println("============");
+//        }
 
     }
 }
