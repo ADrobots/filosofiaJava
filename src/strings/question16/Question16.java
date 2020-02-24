@@ -4,6 +4,8 @@
  * Подсказка: Список имен файлов можно построить командой
  *          File[] files=new File(".").listFiles();
  */
+
+//мой вариант
 package strings.question16;
 
 import net.mindview.util.TextFile;
@@ -20,7 +22,7 @@ public class Question16 {
         }
 
         File file=new File(args[0]);
-        if (file.getName().endsWith(".java")){
+        if (file.getName().endsWith(".java")){//file.getName().endsWith(".java"
             System.out.println("with file");
 
             Matcher m=Pattern.compile(args[1]).matcher("");
