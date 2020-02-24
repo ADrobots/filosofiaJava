@@ -21,13 +21,17 @@ public class Question16 {
             System.exit(0);
         }
 
+
         File file=new File(args[0]);
-        if (file.getName().endsWith(".java")){//file.getName().endsWith(".java"
-            System.out.println("with file");
+        Matcher matcher=Pattern.compile("\\w+\\.{1}\\w+").matcher(args[0]);
+        if (matcher.find()){
+
+//        if (file.getName().endsWith(".java")){//file.getName().endsWith(".java"
+           System.out.println("with file");
 
             Matcher m=Pattern.compile(args[1]).matcher("");
             int index=0;
-            for (String s:new TextFile(args[0].toString())) {
+            for (String s:new TextFile(args[0])) {
                 m.reset(s);
                 while (m.find()){
                     System.out.println(index++ +" "+m.group()+": "+m.start());
@@ -35,7 +39,7 @@ public class Question16 {
             }
         }
 
-        if (!file.getName().endsWith(".java")){
+        if (!matcher.find()){
             System.out.println("directory");
             File[] files=new File(args[0]).listFiles();
 

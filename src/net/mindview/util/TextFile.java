@@ -15,7 +15,7 @@ public class TextFile extends ArrayList<String> {
       BufferedReader in= new BufferedReader(new InputStreamReader(
         new FileInputStream(fileName),"UTF8"));
       try {
-        //System.out.println(fileName);
+        System.out.println(fileName);
         String s;
         while((s = in.readLine()) != null) {
           sb.append(s);
