@@ -19,7 +19,7 @@ extracted blocko.
 !*/
 public class TheReplacements {
     public static void main(String[] args) throws Exception{
-        String s= TextFile.read("C:\\Users\\tony\\IdeaProjects\\filosofiajava\\src\\strings\\TheReplacements.java");
+        String s= TextFile.read("C:\\Users\\work\\Desktop\\java\\filosofiaJava\\src\\strings\\TheReplacements.java");
         //Поиск блока текста, заключенного в специальные комментарии:
         Matcher mInput= Pattern.compile("/\\*!(.*)!\\*/",Pattern.DOTALL).matcher(s);
         //Pattern.DOTAL - в этом режиме метасимвол "." точка совпадает с любым символом.
