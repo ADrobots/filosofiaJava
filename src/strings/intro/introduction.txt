@@ -409,20 +409,5 @@ Regular expressions and io in Java
 В примерах ранее применялись регулярные выражения к статическим строкам.
 Демонстрация примера регулярных выражений для поиска совпадений в файле.
     Пример:
-        C:\Users\work\Desktop\java\filosofiaJava\src\strings\JGrep.java.
+        C:\Users\work\Desktop\java\filosofiaJava\src\strings\JGrep.java
 
-=========
-line scan
-=========
-Раньше считалось хлопотным делом читать данные из текстого файла. Программа читала
-кажду строку файла, разбивала на лексемы и использовала разные методы классов(Integer, String? Double и пр) для разбора данных
-    Пример:
-        C:\Users\tony\IdeaProjects\filosofiaJava\src\strings\SimpleRead.java
-
-Появившийся в JAVA SE 5 класс Scanner ищьавил от сложности сканирования ввода
-    Пример:
-        C:\Users\tony\IdeaProjects\filosofiaJava\src\strings\BetterRead.java
-
-Отличаются два примера тем что во втором примере отсутствует
-try, так как Класс Scanner предполагает что IOException
-говорит о конце входных данных и поглощает эти иключения
