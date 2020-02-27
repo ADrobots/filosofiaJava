@@ -411,3 +411,18 @@ Regular expressions and io in Java
     Пример:
         C:\Users\work\Desktop\java\filosofiaJava\src\strings\JGrep.java
 
+================
+Scanner limiters
+================
+Конструктор класса Scanner разбивает входные данные(строки) по пропускам по умолчанию!
+Возможно так же создать ограничитель в форме регулярного выражения
+    Пример:
+
+
+
+=======================
+Regular expression scan
+=======================
+
+
+
