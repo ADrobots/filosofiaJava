@@ -411,3 +411,35 @@ Regular expressions and io in Java
     Пример:
         C:\Users\work\Desktop\java\filosofiaJava\src\strings\JGrep.java
 
+=========
+line scan
+=========
+Раньше считалось хлопотным делом читать данные из текстого файла. Программа читала
+кажду строку файла, разбивала на лексемы и использовала разные методы классов(Integer, String? Double и пр) для разбора данных
+    Пример:
+        C:\Users\tony\IdeaProjects\filosofiaJava\src\strings\SimpleRead.java
+
+Появившийся в JAVA SE 5 класс Scanner ищьавил от сложности сканирования ввода
+    Пример:
+        C:\Users\tony\IdeaProjects\filosofiaJava\src\strings\BetterRead.java
+
+Отличаются два примера тем что во втором примере отсутствует
+try, так как Класс Scanner предполагает что IOException
+говорит о конце входных данных и поглощает эти иключения
+
+================
+Scanner limiters
+================
+Конструктор класса Scanner разбивает входные данные(строки) по пропускам по умолчанию!
+Возможно так же создать ограничитель в форме регулярного выражения
+    Пример:
+        C:\Users\tony\IdeaProjects\filosofiaJava\src\strings\ScannerDelimiter.java
+
+
+=======================
+Regular expression scan
+=======================
+Сканирование  ввода можно проводить по собственным шаблонам, это возможнасть
+полезна при поиске более сложных данных
+    Пример:
+
