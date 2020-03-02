@@ -48,3 +48,4 @@ Class.forName(), потому что для получения ссылки на
 
 Class содержит много интересных методов, вот несколько из них:
     Пример:
+        C:\Users\tony\IdeaProjects\filosofiaJava\src\typeInformations\ToyTest.java
