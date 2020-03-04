@@ -1,8 +1,9 @@
-//Тестирование класса Class
-package typeInformations;
+package typeInformations.question1;
 
 interface HasBatteries{}
+
 interface Waterproof{}
+
 interface Shoots{}
 
 class Toy{
@@ -14,14 +15,14 @@ class Toy{
 }
 
 //1)FancyToy наледуется от Toy и реализует интерфейсы HasBatteries, Waterproof, Shoots
-class FancyToy extends Toy implements HasBatteries, Waterproof, Shoots{
+class FancyToy extends Toy implements HasBatteries, Waterproof, Shoots {
     //fancy - маскарадный
     FancyToy(){
         super(1);
     }
 }
 
-public class ToyTest {
+public class Question1 {
     //4)метод printInfo() использует getName() для получения полного имя пакета
     //методы getSimpleName() - возвращает  имя без пакета, метод getCanonicalName - возвращает полное имя.
     static void printInfo(Class cc){
@@ -39,7 +40,7 @@ public class ToyTest {
             //3)Которая инициализируется информацией класса FancyToy с ипользованием метода forName()
             //в блоке try
             //внимание, должно указываться полное имя(волючающая имя пакета)
-            c=Class.forName("typeInformations.FancyToy");
+            c=Class.forName("typeInformations.question1.FancyToy");
         }catch (ClassNotFoundException e){
             System.out.println("Не удается найти FancyToy");
             System.exit(0);
@@ -71,3 +72,13 @@ public class ToyTest {
         printInfo(obj.getClass());
     }
 }
+
+/**
+ * Метод newInstance() не может создать объект(суперкласс Toy класса наследника FancyToy)
+ * так создание возможно только в случае вызова конструктора БЕЗ ПАРАМЕТРОВ.
+        информация взята из
+                http://java-course.ru/begin/reflection/
+
+ * вариант из книги
+ * Если конструктор по умолчанию закомментирован, то нельзя обратиться к экземпляру класса Toy, суперкласса FancyToy
+ */
