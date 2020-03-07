@@ -1,4 +1,10 @@
-package typeInformations;
+/**
+ * Добавьте класс Rhomboid в иерархию Shapes. Создайте объект Rhomboid,
+ * выполните восходящее преобразование его в Shape, а затем снова верните
+ * его к классу Rhomboid нисходящим преобразованием. Попробуйте выполнить нисходящее преобразование
+ * к Circle и объясните, что происходит при этом
+ */
+package typeInformations.question3;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,9 +19,10 @@ abstract class Shape{
     //переопределить его а так же во избежании создания экземпляра Shape
     abstract public String toString();
 
+
 }
 
-class Circle extends Shape{
+class Circle extends Shape {
     //каждый производный клсаа переопределяет метод toString()
     //чтобы меод draw() полиморфно выводил в каждом случае различную информацию
     @Override
@@ -24,22 +31,31 @@ class Circle extends Shape{
     }
 }
 
-class Triangle extends Shape{
+class Triangle extends Shape {
     @Override
     public String toString(){
         return "Triangle";
         }
 }
 
-class Square extends Shape{
+class Square extends Shape {
     @Override
     public String toString() {
         return "Square";
     }
 }
 
+class Rhomboid extends Shape{
 
-public class Shapes {
+    String i="Rhomboid";
+    @Override
+    public String toString() {
+        return "Rhomboid";
+    }
+}
+
+
+public class Question3 {
 
     public static void main(String[] args) {
     //Во время помещения в контейнер List<Shape> объектов произвоходит восходящее преобразование
@@ -52,6 +68,22 @@ public class Shapes {
             //далее вступает полиморфизм - для каждой фигуры Shape вызывается метод.
             sh.draw();
         }
+
+        //вариант из книги
+    Rhomboid rhomboid=new Rhomboid();
+    ((Shape) rhomboid).draw();
+
+        //необратимый тип
+        //((Circle)rhomboid).draw();
+
+    //мой вариант
+    Shape rhomboid2=new Rhomboid();
+    rhomboid2.draw();
+
+
+
+
+
     }
 
 }
