@@ -1,8 +1,8 @@
 /**
- * Измените предыдущий пример пример так, чтобы перед нисходящем преобразованием в нем использовался
- * оператор instanceof для проверки типа
+ * Реализуйте в Shape метод rotate(Shape), который проверяет, не относится ли фигура
+ * к классу Circle(И если относится - не выполняет ли операции)
  */
-package typeInformations.question4;
+package typeInformations.question5;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +45,6 @@ class Square extends Shape {
 
 class Rhomboid extends Shape {
 
-    String i="Rhomboid";
     @Override
     public String toString() {
         return "Rhomboid";
@@ -53,9 +52,29 @@ class Rhomboid extends Shape {
 }
 
 
-public class Question4 {
+public class Question5 {
 
-    public static void main(String[] args) {
+    //мой вариант
+//    public static void rotate(Shape s) throws Exception{
+//        if (s instanceof Circle){
+//
+//            Class circle=Class.forName("typeInformations.question5."+s);
+//
+//            List arr=Arrays.asList(circle.getMethods());
+//            for (Object str:arr) {
+//                System.out.println(str);
+//            }
+//        }
+//    }
+
+    //вариант из книги
+    public  static void rotate(Shape s){
+        if (!(s instanceof Circle)){
+            System.out.println(s+" rotate");
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
     //Во время помещения в контейнер List<Shape> объектов произвоходит восходящее преобразование
     //При восходящем преобразовании объекты теряют конкретную разновидность Shape
     List<Shape> shapes=Arrays.asList(new Circle(), new Triangle(), new Square());
@@ -67,14 +86,12 @@ public class Question4 {
             sh.draw();
         }
 
-        //вариант из книги
+        //мой вариант
+//        rotate(new Circle());
 
-        Shape rhomboid1=new Rhomboid();
-
-        if (rhomboid1 instanceof Circle){
-            ((Circle)rhomboid1).draw();
-        }else{
-            System.out.println(rhomboid1+" is not Circle");
+        //Плюс вариант из книги
+        for (Shape s:shapes) {
+            rotate(s);
         }
 
 
