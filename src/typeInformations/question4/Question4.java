@@ -68,13 +68,18 @@ public class Question4 {
         }
 
         //вариант из книги
+    Rhomboid rhomboid=new Rhomboid();
+    ((Shape) rhomboid).draw();
 
-        Shape rhomboid1=new Rhomboid();
+        //необратимый тип
+        //System.out.println(rhomboid instanceof Circle);
+        //((Circle)rhomboid).draw();
 
-        if (rhomboid1 instanceof Circle){
-            ((Circle)rhomboid1).draw();
-        }else{
-            System.out.println(rhomboid1+" is not Circle");
+        Shape s=rhomboid;
+        if (s instanceof Circle){
+            ((Circle)s).draw();
+        }else {
+            System.out.println(s+" is not "+Circle.class.getSimpleName());
         }
 
 
