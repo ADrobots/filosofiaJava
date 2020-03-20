@@ -145,6 +145,20 @@ Class<?> является предпрчтительной по сравнени
         +
         typeInformations.PetCount.java
 
+====================
+Using class literals
+====================
+    Программа получается компактной, если использовать в PetCreator литералы class
+        Пример:
+            C:\Users\work\Desktop\java\filosofiaJava\src\typeInformations\LiteralPetCreator.java
+
+В библиотеке typeInformations.pets теперь две реализации PetCreator. Чтобы вторая реализация использовалась
+по умолчанию, мы можем предоставить реализацию паттерна "Фасад", использующая LiteralPetCreator:
+        Пример:
+            C:\Users\work\Desktop\java\filosofiaJava\src\typeInformations\pets\LiteralPetCreator.java
+
+
+
 
 
 
