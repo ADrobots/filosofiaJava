@@ -1,18 +1,18 @@
-package typeInformations;
+package typeInformations.question11;
 
 import net.mindview.util.MapData;
 import typeInformations.pets.LiteralPetCreator;
 import typeInformations.pets.Pet;
-import typeInformations.pets.PetCreator;
 import typeInformations.pets.Pets;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 
-public class PetCount3 {
+public class PetCount31 {
     static class PetCounter extends LinkedHashMap<Class<? extends Pet>,Integer>{
         public PetCounter(){
-            super(MapData.map(LiteralPetCreator.allTypes,0));
+            super(MapData.map(LiteralPetCreator1.allTypes,0));
 
         }
 
@@ -41,7 +41,7 @@ public class PetCount3 {
 
     public static void main(String[] args) {
         PetCounter petCounter=new PetCounter();
-        for (Pet pet: Pets.createArray(20)) {
+        for (Pet pet: Pets1.createArray(20)) {
             System.out.print(pet.getClass().getSimpleName()+" ");
             petCounter.count(pet);
         }

@@ -48,7 +48,7 @@ public class PetCount {
 }
 
 /**
- * В методе countPets() массив Pet[] создается методом createArray() из класса PetCreator
+ * В методе countPets() массив Pet[] создается методом createArray() из класса PetCreator1
  *
  * Каждый объект Pet проверяется и подсчитывается с использованием inctanceof
  * Недостатком оператора inctanceof является только вомзожность сравнить с именованным типом а не с объектом Class.

@@ -1,4 +1,4 @@
-//: typeinfo/pets/ForNameCreator.java
+//: typeinfo/pets/ForNameCreator11.java
 package chapter11.typeinfo.pets;
 import java.util.*;
 

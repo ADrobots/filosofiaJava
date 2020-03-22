@@ -1,4 +1,4 @@
-//Создавая объект(ForNameCreator), производный от PetCreator
+//Создавая объект(ForNameCreator11), производный от PetCreator1
 //Нужно передать только контейнер с типами объектов, которые создаются методом
 //randomPet() и другими методами.
 
@@ -9,7 +9,7 @@ import typeInformations.pets.Pet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ForNameCreator extends PetCreator {
+public class ForNameCreator11 extends PetCreator1 {
     private static List<Class<? extends Pet>> types=new ArrayList<Class<? extends Pet>>();
 
     private static String[] typeNames={

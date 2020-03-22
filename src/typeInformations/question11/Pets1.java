@@ -4,8 +4,8 @@ import typeInformations.pets.Pet;
 
 import java.util.ArrayList;
 
-public class Pets {
-    public static final PetCreator creator=new LiteralPetCreator();
+public class Pets1 {
+    public static final PetCreator1 creator=new LiteralPetCreator1();
 
     public static Pet randomPet(){
         return creator.randomPet();

@@ -9,7 +9,7 @@ import typeInformations.pets.*;
 
 import java.util.HashMap;
 
-public class PetCount {
+public class PetCount1 {
     static class PetCounter extends HashMap<String, Integer>{
         public void count(String type){
             Integer quantitute=get(type);
@@ -22,7 +22,7 @@ public class PetCount {
         }
     }
 
-        public static void countPets(PetCreator creator){
+        public static void countPets(PetCreator1 creator){
             PetCounter counter=new PetCounter();
             for (Pet pet:creator.createArray(20)) {
                 //подсчет объектов Pet
@@ -43,14 +43,14 @@ public class PetCount {
 
 
     public static void main(String[] args) {
-        countPets(new ForNameCreator());
+        countPets(new ForNameCreator11());
     }
 
 
 }
 
 /**
- * В методе countPets() массив Pet[] создается методом createArray() из класса PetCreator
+ * В методе countPets() массив Pet[] создается методом createArray() из класса PetCreator1
  *
  * Каждый объект Pet проверяется и подсчитывается с использованием inctanceof
  * Недостатком оператора inctanceof является только вомзожность сравнить с именованным типом а не с объектом Class.

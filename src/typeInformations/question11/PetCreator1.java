@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public abstract class PetCreator {
+public abstract class PetCreator1 {
     private Random rand=new Random(47);
     //Контейнер List с разными видами создаваемых объектов Pet
     public abstract List<Class<? extends Pet>> types();

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class LiteralPetCreator extends PetCreator {
+public class LiteralPetCreator1 extends PetCreator1 {
 
     public static final List<Class<? extends Pet>> allTypes= Collections.unmodifiableList(
             Arrays.asList(Pet.class, Dog.class, Cat.class, Rodent.class,

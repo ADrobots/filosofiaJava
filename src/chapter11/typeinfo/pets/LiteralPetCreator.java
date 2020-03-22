@@ -1,4 +1,4 @@
-//: typeinfo/pets/LiteralPetCreator.java
+//: typeinfo/pets/LiteralPetCreator1.java
 // Using class literals.
 package chapter11.typeinfo.pets;
 import java.util.*;

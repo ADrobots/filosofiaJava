@@ -26,7 +26,7 @@ public class MapOfList {
 
     public static void main(String[] args) {
         System.out.println("People: "+petPeople.keySet());//вывод ключей коллекции, то есть людей
-        System.out.println("Pets: "+petPeople.values());//вывод значений коллекций, то есть животных
+        System.out.println("Pets1: "+petPeople.values());//вывод значений коллекций, то есть животных
 
         for (Person person:petPeople.keySet()) {
             System.out.println(person+" has: ");

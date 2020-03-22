@@ -1,13 +1,12 @@
-package typeInformations;
+package typeInformations.question11;
 
 import net.mindview.util.TypeCounter;
-import typeInformations.pets.Pet;
-import typeInformations.pets.Pets;
+import typeInformations.pets.*;
 
-public class PetCount4 {
+public class PetCount41 {
     public static void main(String[] args) {
         TypeCounter counter=new TypeCounter(Pet.class);
-        for (Pet pet: Pets.createArray(20)) {
+        for (Pet pet: Pets1.createArray(20)) {
             System.out.print(pet.getClass().getSimpleName()+" ");
             counter.count(pet);
         }
