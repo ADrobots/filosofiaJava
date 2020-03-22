@@ -2,7 +2,7 @@
 //Ключами контейнера Map являются имена типов Pet, а значениями - количество Pet.
 //Оператор instanceof используется для подсчета объектов Pet
 
-package typeInformations;
+package typeInformations.question11;
 
 
 import typeInformations.pets.*;
@@ -27,12 +27,14 @@ public class PetCount {
             for (Pet pet:creator.createArray(20)) {
                 //подсчет объектов Pet
                 System.out.print(pet.getClass().getSimpleName()+" ");
+                if (pet instanceof Gerbil) counter.count("Gerbil");
                 if (pet instanceof Pet) counter.count("Pet");
                 if (pet instanceof Dog) counter.count("Dog");
                 if (pet instanceof Mutt) counter.count("Mutt");
                 if (pet instanceof Pug) counter.count("Pug");
                 if (pet instanceof Cat) counter.count("Cat");
                 if (pet instanceof Manx) counter.count("EgyptiaMau");
+
             }
             System.out.println();
             System.out.println(counter);
@@ -42,8 +44,8 @@ public class PetCount {
 
     public static void main(String[] args) {
         countPets(new ForNameCreator());
-        System.out.println(new ForNameCreator());
     }
+
 
 }
 

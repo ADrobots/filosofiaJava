@@ -1,6 +1,8 @@
 //Инструмент для случайного создания разных объектов, производных от Pet
 //Так же для создания массивов и контейнеров List с элементами Pet
-package typeInformations.pets;
+package typeInformations.question11;
+
+import typeInformations.pets.Pet;
 
 import java.util.ArrayList;
 import java.util.Collections;
