@@ -133,6 +133,27 @@ Class<?> является предпрчтительной по сравнени
 метасимвол "?" следует объединять с ключевым словом extends для создания привзки
 Поэтому вместо Class<Number> используется следующая запись
     Пример:
+************должен загрузиться кусок коммита из дома***********
+
+Предложение if проверяет, принадлежит ли x классу Dog, прежде чем выполнить приведение к типу Dog.
+Рекомендуется использовать ключевое слово inctanceof перед приведением нисходящего преобразования.
+С помощью instanceof можно подсчитать все типы объекта.
+    Пример:
+        typeInformations.pets.*java
+        +
+        typeInformations.PetCount.java
+
+====================
+Using class literals
+====================
+    Программа получается компактной, если использовать в PetCreator литералы class
+        Пример:
+            C:\Users\work\Desktop\java\filosofiaJava\src\typeInformations\LiteralPetCreator.java
+
+В библиотеке typeInformations.pets теперь две реализации PetCreator. Чтобы вторая реализация использовалась
+по умолчанию, мы можем предоставить реализацию паттерна "Фасад", использующая LiteralPetCreator:
+        Пример:
+            C:\Users\work\Desktop\java\filosofiaJava\src\typeInformations\pets\LiteralPetCreator.java
 
 ====================
 Registered factories
