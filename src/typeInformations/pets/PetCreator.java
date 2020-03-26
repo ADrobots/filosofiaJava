@@ -12,16 +12,22 @@ public abstract class PetCreator {
     //Контейнер List с разными видами создаваемых объектов Pet
     public abstract List<Class<? extends Pet>> types();
 
-    //создание одного случайного объекта Pet
+    //метод взят из конспекта
+//    //создание одного случайного объекта Pet
+//    public Pet randomPet(){
+//        int n=rand.nextInt(types().size());
+//        try{
+//            return types().get(n).newInstance();
+//        }catch (InstantiationException e){
+//            throw new RuntimeException(e);
+//        }catch (IllegalAccessException e){
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    //Метод взят из задания номер 15
     public Pet randomPet(){
-        int n=rand.nextInt(types().size());
-        try{
-            return types().get(n).newInstance();
-        }catch (InstantiationException e){
-            throw new RuntimeException(e);
-        }catch (IllegalAccessException e){
-            throw new RuntimeException(e);
-        }
+        return PetFactory.createRandom();
     }
 
     public Pet[] createArray(int size){

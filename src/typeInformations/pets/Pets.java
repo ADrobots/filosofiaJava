@@ -1,6 +1,6 @@
 package typeInformations.pets;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 public class Pets {
     public static final PetCreator creator=new LiteralPetCreator();
@@ -9,16 +9,16 @@ public class Pets {
         return creator.randomPet();
     }
 
+//Данный метод был взят и конспекта
+//    public static Pet[] createArray(int size){
+//        return creator.createArray(size);
+//    }
+
+    //Данный метод был взят из задания номер 15
     public static Pet[] createArray(int size){
         return creator.createArray(size);
     }
-
     public static ArrayList<Pet> arrayList(int size){
         return  creator.arrayList(size);
     }
 }
-
-/**
- * Фасад так-же обеспечивает доступ к randomPet(), createArray()и arrayList()
- * {@link typeInformations.PetCount2}
- */
